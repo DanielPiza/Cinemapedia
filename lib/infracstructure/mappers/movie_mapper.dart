@@ -16,8 +16,8 @@ class MovieMapper {
       popularity: moviedb.popularity,
       posterPath: (moviedb.posterPath != '')
           ? 'https://image.tmdb.org/t/p/w500${moviedb.posterPath}'
-          : 'https://img.lovepik.com/element/40021/7866.png_1200.png',
-      releaseDate: moviedb.releaseDate,
+          : 'https://www.plowingmatch.org/wp-content/uploads/2023/06/no-poster.jpg',
+      releaseDate: moviedb.releaseDate != null ? moviedb.releaseDate! : DateTime.now(),
       title: moviedb.title,
       video: moviedb.video,
       voteAverage: moviedb.voteAverage,
